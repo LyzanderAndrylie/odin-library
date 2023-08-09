@@ -6,7 +6,7 @@ Simple library app created with JavaScript.
 
 Check out here! :smile:
 
-:link: <https://lyzanderandrylie.github.io/src/index.html>
+:link: <https://lyzanderandrylie.github.io/odin-library/src/index.html>
 
 ## Requirements
 
