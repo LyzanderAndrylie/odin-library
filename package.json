@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "postcss ./input.css -o ./src/css/style.css",
-    "dev": "tailwindcss -i ./input.css -o ./src/css/style.css --watch"
+    "dev": "tailwindcss -i ./input.css -o ./src/css/style.css --watch",
+    "format-html": "prettier ./src/index.html --write",
+    "format-js": "prettier ./src/js/script.js --write"
   },
   "keywords": [],
   "author": "",

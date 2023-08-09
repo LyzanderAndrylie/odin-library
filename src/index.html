@@ -1,13 +1,72 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js" defer></script>
-  </head>
-  <body>
-    
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body class="grid min-h-screen grid-rows-[10vh_1fr_5vh] font-roboto">
+  <dialog id="add-book-dialog" class="w-72 rounded-xl p-4 backdrop:bg-slate-400 backdrop:bg-opacity-60">
+    <form id="add-book-form">
+      <h1 class="mb-6 text-center text-xl font-bold">Add Book</h1>
+      <div class="mb-2">
+        <label class="block" for="title">Title</label>
+        <input class="w-full rounded border border-slate-200 bg-slate-50" type="text" name="title" id="title"
+          required />
+      </div>
+      <div class="mb-2">
+        <label class="block" for="author">Author</label>
+        <input class="w-full rounded border border-slate-200 bg-slate-50" type="text" name="author" id="author"
+          required />
+      </div>
+      <div class="mb-2">
+        <label class="block" for="pages">Total Pages</label>
+        <input class="w-full rounded border border-slate-200 bg-slate-50" type="number" min="1" name="pages" id="pages"
+          required />
+      </div>
+      <fieldset class="mb-6">
+        <legend>Read Status</legend>
+        <div>
+          <input class="accent-tussock-500" type="radio" name="read" value="done" id="done" required />
+          <label for="done" class="mr-2">Done</label>
+          <input class="accent-tussock-500" type="radio" name="read" value="not-done" id="not-done" required />
+          <label for="not-done">Not Done</label>
+        </div>
+      </fieldset>
+      <div class="flex gap-4">
+        <button class="flex-1 rounded-xl bg-tussock-500 p-1 text-white hover:bg-tussock-600 active:bg-tussock-700"
+          type="submit" formmethod="post">
+          Add
+        </button>
+        <button
+          class="flex-1 rounded-xl border border-tussock-700 p-1 text-tussock-700 hover:bg-tussock-50 active:bg-tussock-100"
+          type="submit" formmethod="dialog" formnovalidate>
+          Cancel
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <header class="flex items-center justify-between border border-slate-200 p-4">
+    <div class="flex items-center gap-2">
+      <img class="w-14" src="./media/asset/odin-logo.png" alt="" />
+      <span class="font-norse-bold text-2xl font-bold">The Odin Library</span>
+    </div>
+    <button class="rounded-xl bg-tussock-500 p-2 text-white hover:bg-tussock-600 active:bg-tussock-700" type="button"
+      id="add-book-btn">
+      Add Book
+    </button>
+  </header>
+  <main
+    class="grid grid-cols-[repeat(auto-fit,256px)] content-start justify-center justify-items-center gap-4 bg-slate-50 p-6 empty:flex empty:items-center empty:justify-center empty:font-norse-bold empty:text-4xl empty:before:content-['There_is_no_book_at_the_moment']">
+  </main>
+  <footer class="flex items-center justify-center border border-slate-200">
+    Copyright © The Odin Project 2023
+  </footer>
+</body>
+
 </html>

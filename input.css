@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url(../media/font/Norse-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../media/font/Roboto-Regular.ttf);
+}
